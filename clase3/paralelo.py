@@ -13,11 +13,11 @@ def main():
         pid = os.fork()
 
         if pid == 0:
-            # 👶 Proceso hijo
+            #Proceso hijo
             args = cmd.split()
             os.execvp(args[0], args)
         else:
-            # 👨 Proceso padre
+            #Proceso padre
             procesos[pid] = cmd
             print(f"[{pid}] Iniciado: {cmd}")
     exitosos = 0
