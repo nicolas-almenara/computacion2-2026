@@ -13,7 +13,6 @@ class WorkerPool:
     def _shutdown(self, sig, frame):
         print("\n[SUPERVISOR] Shutdown solicitado")
         self.ejecutando = False
-        # Enviar SIGTERM a todos los workers
         for pid in list(self.workers.keys()):
             try:
                 os.kill(pid, signal.SIGTERM)
