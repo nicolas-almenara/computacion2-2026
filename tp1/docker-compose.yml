@@ -1,0 +1,12 @@
+services:
+  monitor:
+    build: .
+    # La TUI necesita terminal interactiva: sin esto curses no funciona.
+    tty: true
+    stdin_open: true
+    # pid: "host"  # Descomentar para monitorear TODOS los procesos del host
+    #              # (por defecto solo ve los procesos del contenedor).
+    volumes:
+      # Montar el código para desarrollo con hot-reload (editar y re-correr).
+      - ./src:/app/src
+      - ./config.json:/app/config.json

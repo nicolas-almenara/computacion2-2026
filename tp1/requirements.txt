@@ -1,0 +1,3 @@
+# El monitor usa solo la librería estándar de Python (curses, multiprocessing,
+# signal, etc.). No requiere dependencias externas.
+# Se deja el archivo por convención y para futuras extensiones.
