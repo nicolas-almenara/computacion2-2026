@@ -1,0 +1,22 @@
+# Dumps generados al vuelo por SIGUSR1 (no son parte del código).
+dump_*.json
+
+# Caché de Python (se regenera solo, no debe ir en la imagen).
+__pycache__/
+*.pyc
+*.pyo
+
+# Git (el historial no tiene por qué estar dentro de la imagen).
+.git
+.gitignore
+
+# El propio Dockerfile y compose no hacen falta dentro de la imagen.
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Archivos de editor / sistema.
+.vscode/
+.idea/
+*.swp
+.DS_Store
