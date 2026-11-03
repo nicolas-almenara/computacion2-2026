@@ -1,0 +1,11 @@
+import socket
+
+with socket.create_connection(('localhost', 8080)) as s:
+    s.sendall(b'test\n')
+    while True:
+        datos = s.recv(4096)
+        if not datos:
+            print(f"el servidor se cerro")
+            break
+        print(f'recv devolvió: {datos!r}')
+        # OJO: falta el chequeo de cierre
